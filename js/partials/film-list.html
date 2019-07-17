@@ -1,0 +1,44 @@
+<h1>Films</h1>
+
+<section id="results">
+    <section>
+        <form>
+            <label>Search: <input data-ng-model="searchText"></label>
+        </form>
+    </section>
+
+    <section>
+        <select data-ng-model="selectedCategory" data-ng-options="category as category.name for category in categorys track by category.name">
+            <option value="">-- choose an option --</option>
+        </select>
+    </section>
+<div id="tableHolder">
+        <table class = "films">
+            <tr id="tableHead">
+
+                <th>Title</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Rating</th>
+                <th>Release Date</th>
+                <th>Last Updated</th>
+
+            </tr>
+            <tr data-ng-repeat="film in films | filter:{name: selectedCategory.name}"
+                data-ng-click="selectFilm($event, film)"
+                data-ng-class="{'selected':selectedFilms.film_id===film.film_id}"
+                style="cursor: pointer;">
+
+                <td>{{film.title}}</td>
+                <td >{{film.description}}</td>
+                <td>{{film.name}}</td>
+                <td>{{film.rating}}</td>
+                <td>{{film.release_year}}</td>
+                <td>{{film.last_update}}</td>
+
+            </tr>
+        </table>
+</div>
+
+</section>
+

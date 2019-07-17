@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Define the angular app -->
+<html data-ng-app='filmApp'>
+<head>
+<title>WAI-Films</title>
+
+<!-- Meta Info -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="rescourses/css/app.css">
+</head>
+<body>
+<div id="page">
+    <!-- Index Controller Section-->
+    <section class = "top" data-ng-controller="IndexController">
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="#/films">Films</a></li>
+                <li><a href="Testing.html">Links Test</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Film Controller Section -->
+    <!-- List of Films -->
+    <article data-ng-controller="filmController" data-ng-include="'js/partials/course-list.html'"></article>
+    <article data-ng-view></article>
+</div>
+
+<!-- load the basic angular libraries, though initially we'll only need the first two -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.js"></script>
+
+<!-- link to our application files -->
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/services.js"></script>
+
+
+</body>
+</html>

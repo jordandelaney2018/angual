@@ -1,0 +1,35 @@
+<h1>Films</h1>
+
+<section id="results">
+    <section>
+        <form>
+            <input id="search" type="text" placeholder="Search Films" ng-model="searchText"/> <br/><br/>
+            <button ng-click="searchTerms(term)">Search</button>
+        </form>
+    </section>
+
+    <table class = "films">
+        <tr>
+
+            <th>Title</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Release Date</th>
+
+        </tr>
+        <tr data-ng-repeat="film in films"
+            data-ng-click="selectFilm($event, film)"
+            data-ng-class="{'selected':selectedFilms.film_id===film.film_id}"
+            style="cursor: pointer;">
+
+
+            <td>{{film.title}}</td>
+            <td>{{film.description}}</td>
+            <td>{{film.name}}</td>
+            <td>{{film.release_year}}</td>
+
+        </tr>
+    </table>
+</section>
+
+

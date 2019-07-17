@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+
+}
+#page{
+    margin-top: 0;
+}
+a {
+    color: inherit;
+}
+/* Nav Bar */
+.top{
+    margin-top: 0;
+}
+nav{
+    margin-top: 0;
+    width:100%;
+    background-color: #353535;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+nav li {
+    float: left;
+}
+
+nav li a{
+    text-decoration: none;
+    list-style: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px 20px 16px;
+}
+
+/* Main Results Table */
+#tableHolder{
+    width: 60%;
+    max-height: 800px;
+    overflow: scroll;
+    margin-right: 5%;
+    float:left;
+}
+#tableHolder::-webkit-scrollbar {
+     display: none;
+ }
+.selected, .selected a {
+    color: #f9550e !important;
+    font-weight: bold;
+}
+
+
+.films {
+    border-collapse: collapse;
+
+}
+.films td, .films th {
+    padding: 8px;
+    text-overflow: ellipsis;
+
+}
+.films tr{
+    background-color: #353535;
+}
+
+.films tr:hover {
+    background-color: #4a4a4a;
+}
+
+.films th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f9550e;
+    color: white;
+}
+
+/* Extra Details Holder */
+#resultsHolder{
+    width:35%;
+    float: left;
+}
+.header{
+    background-color: #f9550e;
+}
+
+/* Edit details form */
+#noteEdit{
+    position:relative;
+    margin-top: 30px;
+}

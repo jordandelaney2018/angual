@@ -1,0 +1,36 @@
+<div id="resultsHolder">
+<section>
+    <h1 class="header">Actors</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+        </tr>
+        <tr data-ng-repeat="actor in actors">
+            <td>{{actor.first_name}}</td>
+            <td>{{actor.last_name}}</td>
+        </tr>
+    </table>
+
+
+
+
+    <h1 class="header">Notes</h1>
+    <table>
+    <tr data-ng-repeat="note in notes"
+        data-ng-click="showEditNote($event, note, 'noteForm')"
+        data-ng-class="{'selected':selectedNote.film_id===note.film_id}">
+
+        <td>{{note.comment}}</td>
+        <td>{{note.lastupdated}}</td>
+    </tr>
+    </table>
+    <section id="noteEdit">
+        <div data-ng-show="editorVisible"
+             data-ng-include="'js/partials/note-edit.html'"
+             id="noteForm"
+             class='editor shadow'>
+        </div>
+    </section>
+
+</section>
+</div>
